@@ -1,0 +1,129 @@
+.button_nav {
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  margin-top: 10px;
+  width: 230px;
+  border-radius: 7px;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.logo_insta {
+  color: white;
+  margin-top: 10px;
+  font-size: 1.7rem;
+  margin-left: 7px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.button_nav:hover {
+  background-color: rgba(148, 146, 146, 0.185);
+}
+
+.button_nav h3 {
+  margin-left: 10px;
+}
+
+.icon_nav {
+  font-size: 1.5rem;
+}
+
+.button_perfil {
+  border: none;
+  background: transparent;
+  color: white;
+}
+
+.container_all_navbar {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100vh;
+  align-items: flex-start;
+  margin-left: 10px;
+  border-right: 1px solid gray;
+  position: fixed;
+}
+
+.container_buttons_nav {
+  margin-top: 40px;
+}
+
+.name_insta {
+  margin-bottom: 50px;
+  margin-left: 15px;
+}
+
+.photo_nav_profile {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.container_search_mode {
+  display: flex;
+  flex-direction: row;
+  width: 470px;
+  height: 100vh;
+  z-index: 3000;
+  position: fixed;
+  background-color: black;
+  border-radius: 0px 10px 10px 0px;
+  border-right: 1px solid gray;
+}
+
+.container_buttons_search_mode {
+  margin-left: 14px;
+}
+
+.search-block {
+  position: relative;
+  top: 40px;
+  right: 120px;
+}
+
+.search-block h1 {
+  font-size: 1.5rem;
+  margin-bottom: 47px;
+}
+
+.search-block h3 {
+  margin-top: 40px;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  background: #363636;
+  width: 320px;
+  padding: 15px 20px 15px 10px;
+  border-radius: 7px;
+  box-shadow: none;
+}
+
+.search-input::placeholder {
+  color: rgba(194, 191, 191, 0.795);
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.container_messages_mode {
+  display: flex;
+  flex-direction: row;
+  width: 470px;
+  height: 100vh;
+  z-index: 3000;
+  position: fixed;
+  background-color: black;
+  border-radius: 0px 10px 10px 0px;
+  border-right: 1px solid gray;
+}

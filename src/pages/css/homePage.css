@@ -1,0 +1,50 @@
+.container_all_homePage {
+  top: 160px;
+  position: absolute;
+  left: 400px;
+}
+
+.container_all_sugerencias {
+  width: 250px;
+  position: absolute;
+  left: 660px;
+  top: -29px;
+}
+
+.container_all_sugerencias h4 {
+  color: rgb(180, 180, 180);
+  position: relative;
+  right: 25px;
+}
+
+.sugerencia_profile {
+  cursor: pointer;
+  position: absolute;
+  width: 270px;
+  left: 630px;
+  top: -120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.userName_firstName_profile {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+.sugerencia_image_profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.button_cambiar {
+  border: none;
+  background: transparent;
+  color: #0077c4;
+  margin-left: 68px;
+}

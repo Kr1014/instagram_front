@@ -1,0 +1,32 @@
+.content_one_comment_userAndComment {
+  display: flex;
+  position: relative;
+  margin-top: 20px;
+}
+
+.img_one_comment {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 14px;
+}
+
+.heart_comment {
+  position: absolute;
+  left: 450px;
+  cursor: pointer;
+}
+
+.container_time_res_comment {
+  display: flex;
+  margin-left: 65px;
+  margin-top: -5px;
+}
+
+.button_res {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 0.7rem;
+  margin-left: 20px;
+}

@@ -1,0 +1,30 @@
+.image_user_search {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.container_one_result {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 50px;
+  width: 320px;
+  /* padding: 15px; */
+}
+
+.container_one_result:hover {
+  cursor: pointer;
+  background-color: rgba(102, 102, 102, 0.363);
+}
+
+.names_user_search {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.container_one_result h5 {
+  color: rgb(168, 168, 168);
+}

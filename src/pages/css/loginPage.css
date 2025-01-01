@@ -1,0 +1,86 @@
+.container_log{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(180deg, #B785C4, #8EA1CB);
+    overflow: hidden;
+}
+
+.circle{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.circle_1{
+    left: 1200px;
+    bottom: 450px;
+    background-color: #CF4286;
+}
+
+.circle_2{
+    left: -150px;
+    top: 450px;
+    background-color: #C95795;
+}
+
+.title_login{
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: Georgia, serif;
+}
+
+.logo_instagram{
+    width: 100px;
+    padding: 3px;
+    border-radius: 20px;
+    font-size: 5.5rem;
+    background: linear-gradient(-210deg, #6228d7, #ee2a7b, #f9ce34);
+}
+
+.title_login h2{
+    font-size: 1.7rem;
+}
+
+input{
+    width: 240px;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 7px;
+    background-color: rgba(255, 255, 255, 0.842);
+}
+
+input::placeholder{
+    color: #727274;
+}
+
+.inp_pass{
+    margin-top: 10px;
+}
+
+.button_login{
+    margin-top: 25px;
+    margin-bottom: 40px;
+    width: 240px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #3C4483;
+    color: white;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+    transition: .4s;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.button_login:hover{
+    transform: scale(1.1);
+}
+
+.container_link_register h3{
+    font-family: Georgia, serif;
+    font-size: .9rem;
+}

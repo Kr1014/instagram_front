@@ -1,0 +1,8 @@
+.content_publi_random {
+  position: relative;
+  top: 50px;
+  margin-left: 340px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}

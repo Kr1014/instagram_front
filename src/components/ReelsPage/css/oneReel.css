@@ -1,0 +1,133 @@
+.container_one_reel {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.videoReel {
+  position: relative;
+  max-width: 400px;
+  max-height: 700px;
+  left: 29%;
+  top: 35px;
+  width: 30%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.play_pause_btn {
+  position: absolute;
+  top: 50%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  width: 80px;
+  height: 80px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.mute_btn {
+  position: absolute;
+  left: 570px;
+  top: 50px;
+  padding-left: 2px;
+  padding-right: 30px;
+  font-size: 1.8rem;
+  width: 30px;
+  height: 30px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.container_user_reel_profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  left: 320px;
+  bottom: 130px;
+  z-index: 30;
+  width: 300px;
+  height: 100px;
+}
+.container_user_reel_profile h4 {
+  cursor: pointer;
+}
+
+.img_user_reel_profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.button_reel_siguiendo {
+  background: transparent;
+  border: 1px solid rgba(150, 150, 150, 0.432);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.button_reel_seguir {
+  background: transparent;
+  border: 1px solid rgba(150, 150, 150, 0.432);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.container_buttons_reels {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 20px;
+  left: 503px;
+  bottom: 400px;
+}
+
+.container_title_and_icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button_reels {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.button_reels_save {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.button_reels_options {
+  font-size: 0.9rem;
+  margin-top: 18px;
+  cursor: pointer;
+}
+
+.img_user_reel {
+  width: 28px;
+  height: 28px;
+  border: solid 1px white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 18px;
+  cursor: pointer;
+}
