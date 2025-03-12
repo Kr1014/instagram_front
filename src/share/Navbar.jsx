@@ -69,7 +69,6 @@ const Navbar = () => {
           console.log("📌 Prev Messages antes de buscar:", prevMessages);
           console.log("Nuevo Mensaje recibido:", nuevoMensaje);
 
-          // Buscar el chat existente basado en el usuario y destinatario del mensaje
           const chatExistente = prevMessages.find((chat) => {
             console.log(
               `🔍 Comparando chat existente: Chat Usuario ${chat.usuario.id} vs Mensaje Remitente ${nuevoMensaje.remitenteId}, Chat Usuario ${chat.usuario.id} vs Mensaje Destinatario ${nuevoMensaje.destinatarioId}`

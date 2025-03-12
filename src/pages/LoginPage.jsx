@@ -9,7 +9,6 @@ const LoginPage = () => {
   const { handleSubmit, register, reset } = useForm();
   const navigate = useNavigate();
 
-  // Estado para manejar el modal
   const [modalVisible, setModalVisible] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
 
@@ -19,7 +18,6 @@ const LoginPage = () => {
       await useAuth(url, data);
       navigate("/home");
     } catch (err) {
-      // Mostrar mensaje de error en el modal
       setModalMessage(
         "Credenciales incorrectas. Por favor, inténtalo de nuevo."
       );
@@ -67,8 +65,8 @@ const LoginPage = () => {
       </div>
 
       {modalVisible && (
-        <div style={modalStyles.overlay}>
-          <div style={modalStyles.modal}>
+        <div className="containerModal_loginPage">
+          <div className="contentModal_loginPage">
             <p>{modalMessage}</p>
             <button onClick={() => setModalVisible(false)}>OK</button>
           </div>
@@ -76,29 +74,6 @@ const LoginPage = () => {
       )}
     </>
   );
-};
-
-const modalStyles = {
-  overlay: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    zIndex: 1000,
-  },
-  modal: {
-    background: "white",
-    padding: "20px",
-    borderRadius: "10px",
-    textAlign: "center",
-    boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
-    color: "blue",
-  },
 };
 
 export default LoginPage;

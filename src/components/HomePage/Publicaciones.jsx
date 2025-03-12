@@ -153,13 +153,11 @@ const Publicaciones = ({ publicac }) => {
   const agregarRespuesta = (comentarios, respuesta) => {
     return comentarios.map((comentario) => {
       if (comentario.id === respuesta.comentarioPadreId) {
-        // Aseguramos que `respuestas` siempre sea un array antes de agregar una nueva respuesta
         return {
           ...comentario,
           respuestas: [...(comentario.respuestas || []), respuesta],
         };
       } else if (comentario.respuestas && comentario.respuestas.length > 0) {
-        // Verificamos que `respuestas` no sea undefined antes de acceder a `.length`
         return {
           ...comentario,
           respuestas: agregarRespuesta(comentario.respuestas, respuesta),
@@ -200,7 +198,6 @@ const Publicaciones = ({ publicac }) => {
           : [nuevoComentario, ...prevComments];
       });
 
-      // Resetear estados
       setCommentPubli("");
       setCommentReplyId(null);
     } catch (error) {
@@ -263,20 +260,17 @@ const Publicaciones = ({ publicac }) => {
   const handleInput = (e) => {
     const textarea = e.target;
 
-    // Ajustar el tamaño del textarea
-    textarea.style.height = "40px"; // Reseteamos a la altura mínima
-    textarea.style.height = `${textarea.scrollHeight}px`; // Ajustamos la altura
+    textarea.style.height = "40px";
+    textarea.style.height = `${textarea.scrollHeight}px`;
 
-    // Verificar si el textarea ha alcanzado su altura máxima
-    const maxHeight = 70; // Altura máxima
+    const maxHeight = 70;
     if (textarea.scrollHeight >= maxHeight) {
-      textarea.style.overflowY = "auto"; // Mostrar la barra de desplazamiento
-      textarea.style.height = `${maxHeight}px`; // Limitar la altura al máximo
+      textarea.style.overflowY = "auto";
+      textarea.style.height = `${maxHeight}px`;
     } else {
-      textarea.style.overflowY = "hidden"; // Si no ha alcanzado el máximo, ocultamos la barra de desplazamiento
+      textarea.style.overflowY = "hidden";
     }
 
-    // Mover el contenedor anterior hacia arriba solo si el textarea no ha alcanzado su altura máxima
     const previousContainer = textAreaContainerRef.current;
     if (previousContainer && textarea.scrollHeight < maxHeight) {
       previousContainer.style.transform = `translateY(-${textarea.scrollHeight - 40}px)`;

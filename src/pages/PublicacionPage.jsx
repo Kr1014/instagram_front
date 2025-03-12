@@ -198,20 +198,16 @@ const PublicacionPage = () => {
   const estructurarComentarios = (comentarios) => {
     const mapaComentarios = new Map();
 
-    // Inicializar cada comentario en el mapa con respuestas vacías
     comentarios.forEach((comentario) => {
       mapaComentarios.set(comentario.id, { ...comentario, respuestas: [] });
     });
 
-    // Construimos la estructura anidada
     const comentariosAnidados = [];
 
     comentarios.forEach((comentario) => {
       if (comentario.comentarioPadreId === null) {
-        // Si es un comentario padre, lo agregamos al array final
         comentariosAnidados.push(mapaComentarios.get(comentario.id));
       } else {
-        // Si es una respuesta, la agregamos dentro del comentario padre correspondiente
         const padre = mapaComentarios.get(comentario.comentarioPadreId);
         if (padre) {
           padre.respuestas.push(mapaComentarios.get(comentario.id));
@@ -223,7 +219,7 @@ const PublicacionPage = () => {
   };
 
   const comentariosEstructurados = useMemo(() => {
-    const copiaComentarios = [...comentarios]; // 🔥 Asegurar nueva referencia
+    const copiaComentarios = [...comentarios];
     return estructurarComentarios(copiaComentarios);
   }, [comentarios]);
 
@@ -276,7 +272,6 @@ const PublicacionPage = () => {
     const diffDays = Math.floor(diffMilliseconds / (1000 * 60 * 60 * 24));
 
     if (diffHours < 24) {
-      // Si la publicación tiene menos de 24 horas, mostrar "hace X horas"
       return formatDistanceToNow(publicationDate, {
         addSuffix: true,
         locale: es,
@@ -285,15 +280,13 @@ const PublicacionPage = () => {
     }
 
     if (diffDays > 5) {
-      // Si la publicación es del mismo año, mostrar "7 de enero"
       if (publicationDate.getFullYear() === now.getFullYear()) {
         return format(publicationDate, "d 'de' MMMM", { locale: es });
       }
-      // Si es de un año diferente, mostrar "7 de enero de 2023"
+
       return format(publicationDate, "d 'de' MMMM 'de' yyyy", { locale: es });
     }
 
-    // Si tiene entre 1 y 5 días, mostrar "hace X días"
     return formatDistanceToNow(publicationDate, {
       addSuffix: true,
       locale: es,
@@ -315,7 +308,6 @@ const PublicacionPage = () => {
       const textAfterCursor = prevText.slice(cursorPos);
       const newText = textBeforeCursor + emojiData.emoji + textAfterCursor;
 
-      // Esperar a que el estado se actualice antes de modificar el cursor
       setTimeout(() => {
         if (refEmoji.current) {
           refEmoji.current.selectionStart = cursorPos + emojiData.emoji.length;
@@ -324,7 +316,7 @@ const PublicacionPage = () => {
         }
       }, 0);
 
-      return newText; // Retornar el nuevo valor correctamente actualizado
+      return newText;
     });
   };
 

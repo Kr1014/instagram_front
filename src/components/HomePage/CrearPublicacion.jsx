@@ -40,11 +40,11 @@ const CrearPublicacion = ({ setShowCreate, showCreate }) => {
       return;
     }
 
-    const data = new FormData(); // Crear un FormData para enviar archivos
-    data.append("contentUrl", formData.contentUrl); // Agregar la imagen
-    data.append("description", formData.description.trim()); // Agregar la descripción
+    const data = new FormData();
+    data.append("contentUrl", formData.contentUrl);
+    data.append("description", formData.description.trim());
 
-    dispatch(addPubliThunk(data)); // Enviar la publicación con FormData
+    dispatch(addPubliThunk(data));
     navigate("/home");
     setShowCreate(false);
     setFormData({ contentUrl: "", description: "" });

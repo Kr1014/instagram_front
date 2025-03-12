@@ -85,7 +85,7 @@ const Comentarios = ({ coment, setCommentPubli, setCommentReplyId }) => {
       setLikeOneComment((prev) => !prev);
       setCountLikers((prevLikers = []) => {
         if (!Array.isArray(prevLikers)) {
-          return []; // Asegura que siempre sea un array
+          return [];
         }
 
         return likeOneComment
@@ -97,7 +97,6 @@ const Comentarios = ({ coment, setCommentPubli, setCommentReplyId }) => {
     }
   };
 
-  // Función para contar todas las respuestas, incluyendo respuestas de respuestas
   const contarTodasLasRespuestas = (comentario) => {
     if (!comentario.respuestas || comentario.respuestas.length === 0) {
       return 0;
@@ -276,7 +275,6 @@ const Comentarios = ({ coment, setCommentPubli, setCommentReplyId }) => {
             ) : showAllUsersFollowed.some(
                 (userSeguid) => userSeguid.id === coment.user.id
               ) ? (
-              // Si el usuario que hizo el comentario ya es seguido
               <div className="container_sendMessageAndButtonSeguir_modalShowProfileOneUser">
                 <div className="container_button_sendMessage_modalShowProfileOneUser">
                   <LiaFacebookMessenger className="icon_messenger_button_sendMessage_modalShowProfileOneUser" />
@@ -292,7 +290,6 @@ const Comentarios = ({ coment, setCommentPubli, setCommentReplyId }) => {
                 </button>
               </div>
             ) : (
-              // Si el usuario no está seguido aún
               <div className="container_buttonFollow_modalShowProfileOneUser">
                 <FiUserPlus className="icon_userPlus_modalShowProfileOneUser" />
                 <button onClick={() => handleSeguir(coment.user.id)}>
@@ -304,7 +301,6 @@ const Comentarios = ({ coment, setCommentPubli, setCommentReplyId }) => {
         </div>
       )}
 
-      {/* Contador de respuestas (incluyendo respuestas anidadas) */}
       {coment?.respuestas.length > 0 && (
         <div className="container_seeResComments">
           <div className="borderLeft_seeResComments"></div>
@@ -317,7 +313,6 @@ const Comentarios = ({ coment, setCommentPubli, setCommentReplyId }) => {
         </div>
       )}
 
-      {/* Renderizar las respuestas si están visibles */}
       {showResOfComments && (
         <div className="container_all_resComments">
           {coment?.respuestas.map((commentRes) => (

@@ -1,11 +1,11 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { io } from "socket.io-client";
-import { UserContext } from "../components/LoginPage/UserProvider"; // Asegúrate de importar el contexto
+import { UserContext } from "../components/LoginPage/UserProvider";
 
 const SocketContext = createContext(null);
 
 export const SocketProvider = ({ children }) => {
-  const { user } = useContext(UserContext); // 🔥 Accede al usuario desde el contexto
+  const { user } = useContext(UserContext);
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {

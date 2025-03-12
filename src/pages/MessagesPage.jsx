@@ -93,7 +93,6 @@ const MessagesPage = () => {
       console.log(newMessagesHeight);
       console.log(containerHeight);
 
-      // ⚡ Asegurar que el scroll esté en el último mensaje
       setTimeout(() => {
         if (messagesContainerRef.current) {
           messagesContainerRef.current.scrollTop =
@@ -127,13 +126,12 @@ const MessagesPage = () => {
       textarea.style.overflowY = "hidden";
     }
 
-    // Ajustar el scroll del contenedor de mensajes
     if (messagesContainerRef.current) {
       const imagesHeigth = selectedImage ? 90 : 0;
       const windowHeight = window.innerHeight;
       const newMessagesHeight =
         windowHeight - (textarea.scrollHeight + imagesHeigth + 100);
-      // messagesContainerRef.current.style.height = `${newMessagesHeight}px`;
+
       const totalHeightMessages =
         newMessagesHeight < 356 && selectedImage == null
           ? 358
@@ -211,7 +209,6 @@ const MessagesPage = () => {
       const textAfterCursor = prevText.slice(cursorPos);
       const newText = textBeforeCursor + emojiData.emoji + textAfterCursor;
 
-      // Esperar a que el estado se actualice antes de modificar el cursor
       setTimeout(() => {
         if (textArea.current) {
           textArea.current.selectionStart = cursorPos + emojiData.emoji.length;
@@ -220,7 +217,7 @@ const MessagesPage = () => {
         }
       }, 0);
 
-      return newText; // Retornar el nuevo valor correctamente actualizado
+      return newText;
     });
   };
 

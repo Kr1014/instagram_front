@@ -12,7 +12,6 @@ const ExplorePage = () => {
     getRandomPublicac(url, getToken());
   }, []);
 
-  // Función para dividir las publicaciones en grupos de 5
   const groupPublications = (publications) => {
     const grouped = [];
     for (let i = 0; i < publications?.length; i += 5) {
@@ -29,17 +28,14 @@ const ExplorePage = () => {
         const isReversed = groupIndex % 2 !== 0;
         const adjustedGroup = isReversed ? [...group].reverse() : group;
 
-        // Encontrar los videos en el grupo
         const videos = adjustedGroup.filter(
           (publi) =>
             publi.contentUrl.endsWith(".mp4") ||
             publi.contentUrl.endsWith(".webm")
         );
 
-        // Seleccionar un único video para ser grande (si hay videos)
         let largeVideoId = null;
         if (videos.length > 0) {
-          // Posición del video grande en cada bloque
           const largeVideoIndex = groupIndex % 2 === 0 ? 2 : 0;
           if (
             adjustedGroup[largeVideoIndex]?.contentUrl.endsWith(".mp4") ||
@@ -47,7 +43,7 @@ const ExplorePage = () => {
           ) {
             largeVideoId = adjustedGroup[largeVideoIndex].id;
           } else {
-            largeVideoId = videos[0]?.id; // Si no está en la posición esperada, usa el primer video disponible
+            largeVideoId = videos[0]?.id;
           }
         }
 
@@ -57,7 +53,7 @@ const ExplorePage = () => {
               <PubliRandom
                 key={publiRan?.id}
                 publiRan={publiRan}
-                isLarge={publiRan?.id === largeVideoId} // Solo este video será grande
+                isLarge={publiRan?.id === largeVideoId}
               />
             ))}
           </div>

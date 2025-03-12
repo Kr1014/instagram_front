@@ -8,7 +8,7 @@ export const UserProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const token = localStorage.getItem("token"); // Obtén el token una sola vez
+    const token = localStorage.getItem("token");
     if (token) {
       const loadUser = async () => {
         const loggedUser = await fetchLoggedUser();
@@ -17,10 +17,9 @@ export const UserProvider = ({ children }) => {
       };
       loadUser();
     } else {
-      setLoading(false); // Si no hay token, no hay necesidad de cargar usuario
+      setLoading(false);
     }
-  }, []); // Array vacío asegura que se ejecute solo al montar
-
+  }, []);
   return (
     <UserContext.Provider value={{ user, setUser, loading }}>
       {children}
