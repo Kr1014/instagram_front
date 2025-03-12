@@ -9,13 +9,14 @@ import { UserContext } from "../components/LoginPage/UserProvider";
 import Publicaciones from "../components/HomePage/Publicaciones";
 import { useDispatch, useSelector } from "react-redux";
 import { getPubliThunk } from "../store/publicacionSlice";
+import { NofiticationContext } from "../components/HomePage/ShowNotificationSend";
 
 const HomePage = () => {
   const [allUsers, getAllUsers] = useFetch();
-  const [modalCerrarSesion, setModalCerrarSesion] = useState(false);
+
   const navigate = useNavigate();
   const { user, loading } = useContext(UserContext);
-
+  const { notificationSend } = useContext(NofiticationContext);
   const publicaciones = useSelector((store) => store.publi);
   const dispatch = useDispatch();
 
@@ -44,7 +45,6 @@ const HomePage = () => {
   };
 
   const filterPublica = (publi) => {
-    // Verificar si user.seguidos está definido antes de intentar filtrar
     if (!user || !user.seguidos) return false;
     return user.seguidos.some((seg) => seg.id === publi.userId);
   };
@@ -54,9 +54,6 @@ const HomePage = () => {
       <div className="container_all_homePage">
         {user ? (
           <div className="container_half_homePage">
-            {/* <button onClick={() => setModalCerrarSesion(true)}>
-              Cerrar sesion
-            </button> */}
             <div className="sugerencia_profile" onClick={handleProfile}>
               <img
                 src={user?.photoProfile}
@@ -64,21 +61,128 @@ const HomePage = () => {
                 className="sugerencia_image_profile"
               />
               <div className="userName_firstName_profile">
-                <h5>{user?.userName.toLowerCase()}</h5>
-                <h5>{`${user?.firstName} ${user?.lastName}`}</h5>
+                <h4>{user?.userName.toLowerCase()}</h4>
+                <h4 className="firstNameAndLastName_profile">{`${user?.firstName} ${user?.lastName}`}</h4>
               </div>
               <button className="button_cambiar">
-                <h5>Cambiar</h5>
+                <h4 className="buttonChange_profile">Cambiar</h4>
               </button>
             </div>
 
             <section className="container_all_sugerencias">
-              <h4>Sugerencias para ti</h4>
+              <div className="titles_suggestions_profile">
+                <h4>Sugerencias para ti</h4>
+                <h4 className="seeAll_sugerencias_profile">Ver todo</h4>
+              </div>
               <section className="container_sugerencias">
-                {allUsers?.filter(cbFilter).map((users) => (
-                  <Seguir key={users?.id} users={users} />
-                ))}
+                {allUsers
+                  ?.filter(cbFilter)
+                  .slice(0, 5)
+                  .map((users) => (
+                    <Seguir key={users?.id} users={users} />
+                  ))}
               </section>
+              <div className="containerButtons_infoInsta_homePage">
+                <div className="content_infoInsta_homePage">
+                  <div
+                    onClick={() =>
+                      window.open("https://about.instagram.com/", "_blank")
+                    }
+                  >
+                    <button>Información .</button>
+                  </div>
+                  <div
+                    onClick={() =>
+                      window.open("https://help.instagram.com/", "_blank")
+                    }
+                  >
+                    <button> Ayuda .</button>
+                  </div>
+                  <div
+                    onClick={() =>
+                      window.open("https://about.instagram.com/blog/", "_blank")
+                    }
+                  >
+                    <button>Prensa .</button>
+                  </div>
+                  <div
+                    onClick={() =>
+                      window.open(
+                        "https://developers.facebook.com/docs/instagram-platform",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <button>API .</button>
+                  </div>
+                  <div
+                    onClick={() =>
+                      window.open(
+                        "https://developers.facebook.com/docs/instagram-platform",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <button></button>
+                  </div>
+                  <div
+                    onClick={() =>
+                      window.open(
+                        "https://about.instagram.com/about-us/careers",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <button>Empleos .</button>
+                  </div>
+                  <div
+                    onClick={() =>
+                      window.open(
+                        "https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <button>Privacidad .</button>
+                  </div>
+                  <div
+                    onClick={() =>
+                      window.open(
+                        "https://help.instagram.com/581066165581870/",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <button>Condiciones .</button>
+                  </div>
+                  <div
+                    onClick={() =>
+                      window.open(
+                        "https://www.instagram.com/explore/locations/",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <button>Ubicaciones .</button>
+                  </div>
+                  <div>
+                    <button>Idioma</button>
+                  </div>
+                  <div
+                    onClick={() =>
+                      window.open(
+                        "https://accountscenter.instagram.com/meta_verified/17841404272208709/?entrypoint=web_footer#",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <button>Meta Verified</button>
+                  </div>
+                </div>
+                <div className="container_titleInstaFromMeta">
+                  <h4>© 2025 Instagram from Meta</h4>
+                </div>
+              </div>
             </section>
           </div>
         ) : (
@@ -89,44 +193,14 @@ const HomePage = () => {
             <Publicaciones key={publicac?.id} publicac={publicac} />
           ))}
         </div>
-
-        {modalCerrarSesion && (
-          <div style={modalStyles.overlay}>
-            <div style={modalStyles.modal}>
-              <h3>Desea cerrar sesion?</h3>
-              <button onClick={() => setModalCerrarSesion(false)}>
-                Cancelar
-              </button>
-              <button onClick={handleCerrarSesion}>Cerrar sesion</button>
-            </div>
+        {notificationSend && (
+          <div className="container_homePage_enviado">
+            <h3>Enviado exitosamente</h3>
           </div>
         )}
       </div>
     </>
   );
-};
-
-const modalStyles = {
-  overlay: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    zIndex: 1000,
-  },
-  modal: {
-    background: "white",
-    padding: "20px",
-    borderRadius: "10px",
-    textAlign: "center",
-    boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
-    color: "blue",
-  },
 };
 
 export default HomePage;

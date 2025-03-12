@@ -1,0 +1,160 @@
+.container_createPublic {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.content_createPublic {
+  position: relative;
+  width: 400px;
+  height: 70vh;
+  background-color: #262626;
+  border-radius: 10px;
+}
+
+.container_title_createPublicacion {
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  position: relative;
+  text-align: center;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.container_title_createPublicacion h2 {
+  position: relative;
+  top: 15px;
+  font-size: 1.1rem;
+}
+
+.container_form_createPublic {
+  margin-top: 15px;
+  margin-bottom: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  top: 90px;
+}
+
+.label_inputFile {
+  cursor: pointer;
+  background-color: #0286df;
+  padding: 10px 50px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.icon_upImagesOrVideos_createPublicacion {
+  font-size: 4rem;
+  color: white;
+}
+
+.input_createPublicacion {
+  display: none;
+}
+
+/* Imagen de vista previa */
+.image_preview_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.image_preview {
+  max-width: 100%;
+  max-height: 250px;
+  border-radius: 10px;
+}
+
+/* Botón Siguiente */
+.next_button {
+  padding: 8px 20px;
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.next_button:hover {
+  background-color: #0077cc;
+}
+
+.textarea_description {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: white;
+  resize: none;
+}
+
+/* Botón Publicar */
+.submit_button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 35px;
+}
+
+.submit_button:hover {
+  background-color: #0077cc;
+}
+
+.back_button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 15px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 35px;
+}
+
+/* Botón para cerrar */
+.button_exitCreatePublicacion {
+  position: absolute;
+  bottom: 460px;
+  left: 820px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.containerButtons_backButton_nextButton {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+}
+
+.containerButtons_buttonSubmit_and_buttonBackButton {
+  margin-top: 20px;
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+}

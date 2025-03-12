@@ -95,7 +95,8 @@
   height: 310px;
 }
 
-.container_publicaciones {
+.container_publicaciones,
+.container_publicaciones_guardadas {
   margin-top: 20px;
   width: 100%;
   height: 100vh;

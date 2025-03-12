@@ -7,13 +7,16 @@ import { UserContext } from "../components/LoginPage/UserProvider";
 import axios from "axios";
 import { CgLayoutGridSmall } from "react-icons/cg";
 import { FaClipboardUser } from "react-icons/fa6";
+import { BsSave2 } from "react-icons/bs";
 import ContentPublicaciones from "../components/ProfilePage/ContentPublicaciones";
+import ContentPublicacionesGuardadas from "../components/ProfilePage/ContentPublicacionesGuardadas";
 
 const ProfilePage = () => {
   const params = useParams();
   const [oneUser, getOneUser] = useFetch();
   const [isFollowing, setIsFollowing] = useState(false);
-  const [showContent, setShowContent] = useState("publicaciones");
+  const [publiSaved, setPubliSaved] = useState([]);
+  const [showTypeContent, setShowTypeContent] = useState("publicaciones");
   const { user } = useContext(UserContext);
   const hasFetched = useRef(false);
 
@@ -26,6 +29,15 @@ const ProfilePage = () => {
     setIsFollowing(false);
     hasFetched.current = false;
   }, [params.id]);
+
+  useEffect(() => {
+    const getPubliSaved = async () => {
+      const url = `http://localhost:8080/api/v1/publicacionesGuardadas`;
+      const response = await axios.get(url, getToken());
+      setPubliSaved(response.data);
+    };
+    getPubliSaved();
+  }, []);
 
   useEffect(() => {
     const checkIfFollowing = async () => {
@@ -57,6 +69,10 @@ const ProfilePage = () => {
     }
   };
 
+  const handleCloseComment = () => {
+    setModalComment(false);
+  };
+
   return (
     <div className="container_one_user">
       <div className="container_one_user_data_all">
@@ -64,22 +80,28 @@ const ProfilePage = () => {
         <div className="container_one_user_data">
           <div className="container_one_user_names">
             <h3 className="text_userName">{oneUser?.userName.toLowerCase()}</h3>
-            <div className="container_buttons_one_user">
-              {isFollowing ? (
-                <button className="button_follow button_siguiendo">
-                  Siguiendo
-                </button>
-              ) : (
-                <button
-                  onClick={handleSeguir}
-                  className="button_follow button_seguir"
-                >
-                  Seguir
-                </button>
-              )}
-            </div>
-
-            <button className="send_message">Enviar mensaje</button>
+            {oneUser?.id == user.id ? (
+              <div>
+                <button>Editar perfil</button>
+                <button>Ver archivo</button>
+              </div>
+            ) : (
+              <div className="container_buttons_one_user">
+                {isFollowing ? (
+                  <button className="button_follow button_siguiendo">
+                    Siguiendo
+                  </button>
+                ) : (
+                  <button
+                    onClick={handleSeguir}
+                    className="button_follow button_seguir"
+                  >
+                    Seguir
+                  </button>
+                )}
+                <button className="send_message">Enviar mensaje</button>
+              </div>
+            )}
           </div>
           <div className="container_one_user_numbers">
             <h4>{oneUser?.publicacions?.length || 0} publicaciones</h4>
@@ -95,20 +117,47 @@ const ProfilePage = () => {
       <div className="container_content_one_user">
         <div className="border_one_user"></div>
         <div className="titles_content_one_user">
-          <div className="title">
+          <div
+            className="title"
+            onClick={() => setShowTypeContent("publicaciones")}
+          >
             <CgLayoutGridSmall />
             <h5>PUBLICACIONES</h5>
           </div>
+          {oneUser?.id == user.id && (
+            <div
+              className="title"
+              onClick={() => setShowTypeContent("guardadas")}
+            >
+              <BsSave2 />
+              <h5>GUARDADAS</h5>
+            </div>
+          )}
           <div className="title">
             <FaClipboardUser />
             <h5>ETIQUETADAS</h5>
           </div>
         </div>
-        <div className="container_publicaciones">
-          {oneUser?.publicacions.map((imgUse) => (
-            <ContentPublicaciones key={imgUse.id} imgUse={imgUse} />
-          ))}
-        </div>
+        {showTypeContent == "publicaciones" && (
+          <div className="container_publicaciones">
+            {oneUser?.publicacions.map((publicProfile) => (
+              <ContentPublicaciones
+                key={publicProfile?.id}
+                publicProfile={publicProfile}
+              />
+            ))}
+          </div>
+        )}
+        {showTypeContent == "guardadas" && (
+          <div className="container_publicaciones_guardadas">
+            {publiSaved.map((savePubli) => (
+              <ContentPublicacionesGuardadas
+                key={savePubli.publicacionId}
+                savePubli={savePubli}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

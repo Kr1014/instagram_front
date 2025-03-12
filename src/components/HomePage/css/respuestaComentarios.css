@@ -1,0 +1,60 @@
+.container_oneResComment {
+  display: flex;
+}
+
+.container_resComment_time_res_comment {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.textComment_ResComments {
+  padding-left: 10px;
+}
+
+.resComment_time_res_comment {
+  position: relative;
+  top: 1px;
+  font-size: 0.8rem;
+  color: #a8a8a8;
+}
+
+.button_res_comment_resComment {
+  background: transparent;
+  border: none;
+  color: #a8a8a8;
+  font-size: 0.7rem;
+  margin-left: 20px;
+  position: relative;
+}
+
+.heartComment_resComment {
+  position: absolute;
+  top: 10px;
+  left: 391px;
+  cursor: pointer;
+}
+
+.container_sub_resComments {
+  margin-top: 15px;
+}
+
+.span_userName_textComment_RespuestaComentarios {
+  position: relative;
+  padding-left: 10px;
+  right: 7px;
+  top: 1px;
+  cursor: pointer;
+}
+
+.container_modal_modalShowProfileOneUser_ComponentRespuestasComentarios {
+  height: 350px;
+  width: 320px;
+  z-index: 15;
+  position: fixed;
+  left: 940px;
+  top: 110px;
+  background-color: black;
+  box-shadow: 0px 0px 4px white;
+  border-radius: 10px;
+}

@@ -11,6 +11,17 @@
   top: -29px;
 }
 
+.titles_suggestions_profile {
+  display: flex;
+}
+
+.container_all_sugerencias .seeAll_sugerencias_profile {
+  color: white;
+  font-size: 0.85rem;
+  position: relative;
+  left: 65px;
+}
+
 .container_all_sugerencias h4 {
   color: rgb(180, 180, 180);
   position: relative;
@@ -36,6 +47,10 @@
   margin-left: 10px;
 }
 
+.firstNameAndLastName_profile {
+  color: gray;
+}
+
 .sugerencia_image_profile {
   width: 40px;
   height: 40px;
@@ -46,5 +61,56 @@
   border: none;
   background: transparent;
   color: #0077c4;
-  margin-left: 68px;
+  font-size: 0.75rem;
+  position: relative;
+  left: 101px;
+}
+
+.containerButtons_infoInsta_homePage {
+  position: relative;
+  right: 25px;
+  margin-top: 50px;
+}
+
+.content_infoInsta_homePage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 250px;
+}
+
+.content_infoInsta_homePage button {
+  border: none;
+  background: transparent;
+  color: gray;
+  font-size: 0.72rem;
+}
+
+.container_titleInstaFromMeta {
+  margin-top: 15px;
+  position: relative;
+  left: 26px;
+  font-size: 0.9rem;
+}
+.container_titleInstaFromMeta h4 {
+  color: gray;
+}
+
+.container_homePage_enviado {
+  display: flex;
+  align-items: center;
+  width: 1400px;
+  left: 0;
+  height: 40px;
+  border-radius: 1px;
+  background-color: #2e2e2e;
+  color: white;
+  z-index: 10000;
+  position: fixed;
+  bottom: 0;
+}
+
+.container_homePage_enviado h3 {
+  font-size: 1rem;
+  margin-left: 15px;
 }

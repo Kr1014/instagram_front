@@ -1,27 +1,240 @@
+.container_one_publicacion {
+  position: relative;
+}
+
 .userPhoto_publicac {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-right: 10px;
+  cursor: pointer;
+}
+
+.container_modal_modalShowProfileOneUser_publiMainPhoto {
+  height: 350px;
+  width: 320px;
+  z-index: 15000;
+  position: absolute;
+  left: 0px;
+  top: 30px;
+  background-color: black;
+  box-shadow: 0px 0px 4px white;
+  border-radius: 10px;
+}
+
+.container_modal_modalShowProfileOneUser_publiMainUserName {
+  height: 350px;
+  width: 320px;
+  z-index: 15;
+  position: fixed;
+  left: 555px;
+  top: 170px;
+  background-color: black;
+  box-shadow: 0px 0px 4px white;
+  border-radius: 10px;
 }
 
 .custom_button {
   border: none;
   background: transparent;
   color: white;
-  font-size: 30px;
-  margin-right: 20px;
+  font-size: 1.5rem;
+}
+
+.button_save_onePubli {
+  margin-left: 310px;
+}
+
+.savedPublicActive {
+  margin-left: 320px;
+  background-color: white;
+}
+
+.textTitle_onePubli {
+  margin-top: 10px;
+}
+
+.textTitle_onePubli button {
+  border: none;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  margin-right: 7px;
+}
+
+.container_textArea_triButton_onePubli {
+  width: 100%;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.textArea_triButton_onePubli {
+  max-height: 60px;
+  height: 30px;
+  width: 82%;
+  background: transparent;
+  border: none;
+  resize: none;
+  color: white;
+  font-size: 1rem;
+  overflow-y: hidden;
+}
+
+.textArea_triButton_onePubli::placeholder {
+  font-size: 0.9rem;
+}
+
+.public_commentMainAct {
+  background: transparent;
+  border: none;
+  color: #0095f6;
+  position: relative;
+  right: 50px;
+  bottom: 4px;
+}
+
+.public_mainComment {
+  background: transparent;
+  border: none;
+  visibility: hidden;
+  position: relative;
+  right: 0px;
+  bottom: 4px;
+}
+
+.emoji_commentPubli_main {
+  position: relative;
+  left: 15px;
+  bottom: 4px;
+  cursor: pointer;
+}
+
+.container_emoji_commentMain {
+  position: absolute;
+  left: 450px;
+  bottom: 40px;
+}
+
+.container_emoji_commentMain .content_emojis_commentMain {
+  border-radius: 20px;
+  height: 200px;
+  --epr-bg-color: #262626;
+  --epr-picker-border-color: rgb(94, 94, 94);
+  --epr-search-input-bg-color: rgb(48, 48, 48);
+  --epr-search-border-color: rgba(255, 255, 255, 0.63);
+  --epr-search-input-bg-color-active: #262626;
+  --epr-focus-bg-color: rgb(48, 48, 48);
+  --epr-category-icon-active-color: rgb(94, 94, 94);
+  --epr-category-label-bg-color: #262626;
+}
+
+.buttonComments_textTitle_onePubli {
+  border: none;
+  background: transparent;
+  color: rgba(151, 151, 151, 0.719);
   margin-top: 7px;
 }
 
-.button_like_act {
-  color: red;
+.container_publiComment_mainMomentary {
+  display: flex;
+  margin-top: 8px;
+}
+
+.container_publiComment_mainMomentary button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
 }
 
 .onePubli_userName_photoProfile {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   margin-bottom: 10px;
+}
+
+.onePubli_userName_photoProfile h4 {
+  cursor: pointer;
+}
+
+.options_onePublicacion_homePage {
+  position: relative;
+  left: 297px;
+  cursor: pointer;
+}
+
+.container_modalMoreOptions_Publicaciones {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.content_modalMoreOptions_Publicaciones {
+  background-color: #262626;
+  position: relative;
+  width: 30%;
+  height: 62vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.content_modalMoreOptions_Publicaciones div {
+  width: 100%;
+  border-top: 1px solid rgba(88, 88, 88, 0.808);
+  padding: 4px 0px;
+  position: relative;
+}
+
+.content_modalMoreOptions_Publicaciones button {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  position: relative;
+  top: 10px;
+}
+
+.container_modalMoreOptions_Publicaciones
+  .content_modalMoreOptions_Publicaciones
+  .button_giveUp_Publicaciones {
+  color: #ff3040;
+  position: relative;
+  top: 5px;
+}
+
+.content_modalMoreOptions_Publicaciones
+  .button_follow_modalOptions_Publicaciones {
+  color: #0095f6;
+}
+
+.content_modalMoreOptions_Publicaciones
+  .button_unfollow_modalOption_Publicaciones {
+  color: #ff3040;
+}
+
+.container_video {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid rgba(68, 68, 68, 0.384);
+}
+
+.contentVideo_publicac {
+  height: 570px;
 }
 
 .image_public {
@@ -29,12 +242,19 @@
   height: 470px;
 }
 
+.container_triButton_onePubli {
+  margin-top: 5px;
+  display: flex;
+  gap: 20px;
+}
+
 .border_one_publi {
+  position: relative;
   width: 100%;
+  top: 5px;
   height: 1px;
   background-color: gray;
   margin-bottom: 30px;
-  margin-top: 20px;
 }
 
 .container_modal_comment_content {
@@ -66,6 +286,12 @@
   justify-content: center;
 }
 
+.contentVideo_modal_comment {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .content_image_publica_modal {
   height: 100%;
 }
@@ -95,6 +321,10 @@
   gap: 15px;
 }
 
+.content_img_userName h4 {
+  cursor: pointer;
+}
+
 .border_modal_comment_1 {
   width: 100%;
   height: 1px;
@@ -103,7 +333,6 @@
 
 .border_modal_comment_2 {
   position: relative;
-  margin-top: 10px;
   width: 100%;
   height: 1px;
   background-color: rgba(61, 61, 61, 0.445);
@@ -115,28 +344,45 @@
   overflow-x: hidden;
 }
 
+.user_ownPublic_part2::-webkit-scrollbar {
+  overflow-y: hidden;
+}
+
 .content_img_userName2 {
   display: flex;
   align-items: center;
   gap: 15px;
   margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .photoProfile_modal_comment {
   width: 35px;
   height: 35px;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.content_img_userName2 h4 {
+  cursor: pointer;
 }
 
 .content_comments {
   background-color: black;
   height: 100%;
   width: 500px;
+  z-index: 1;
 }
 
 .content_info_public {
   height: 67px;
   position: relative;
+  background-color: black;
+  padding-top: 10px;
+}
+
+.notcomments {
+  margin-top: 20px;
 }
 
 .add_comment,
@@ -147,55 +393,92 @@
 
 .public_comment {
   color: #0076c49a;
+  position: relative;
+  right: 14px;
+  bottom: 7px;
 }
 
-.public_comment:hover {
+.public_commentAct {
   color: #0286df;
+  border: none;
+  background: transparent;
+  position: relative;
+  right: 14px;
+  bottom: 7px;
 }
 
 .buttons_comment_content {
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
 .buttons_tri_content {
   display: flex;
 }
 
+.container_buttons_comment {
+  display: flex;
+}
+
 .button_comment {
-  font-size: 1.7rem;
-  margin-right: 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 15px;
+  position: relative;
+  bottom: 3px;
+}
+
+.button_like_act {
+  color: #ff3040;
   cursor: pointer;
 }
 
-.content_button_share {
-  position: absolute;
-  right: 0px;
+.button_like {
+  cursor: pointer;
 }
 
-.button_share {
-  font-size: 1.4rem;
+.button_save_onePubli_modalComment {
+  margin-left: 320px;
 }
 
 .how_along_time_publica {
   margin-top: 5px;
+  margin-bottom: 5px;
   color: rgba(141, 141, 141, 0.733);
   font-size: 0.84rem;
+}
+
+.content_create_comment {
+  position: absolute;
+  bottom: 0.5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.content_create_comment textarea {
+  width: 98%;
+  height: 40px;
+  max-height: 80px;
+  padding: 4px 8px 12px 20px;
+  font-size: 0.9rem;
+  color: white;
+  background: transparent;
+  resize: none;
+  overflow-y: hidden;
+  margin-right: 20px;
 }
 
 .emoji {
   font-size: 1.5rem;
   position: relative;
-  top: 12px;
-}
-
-.content_create_comment {
-  height: 40px;
-  width: 100%;
+  bottom: 7px;
+  cursor: pointer;
 }
 
 .add_comment {
   position: relative;
-  top: 7px;
   padding-left: 15px;
   color: white;
   resize: none;
@@ -204,6 +487,374 @@
 
 .time_like {
   margin-top: 5px;
+}
+
+.container_content_usersLiker_modalComment {
+  display: flex;
+}
+
+.container_content_usersLiker_modalComment button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.container_like_otherUsers {
+  display: flex;
+  margin-left: 5px;
+}
+
+.container_like_otherUsers p {
+  margin-right: 5px;
+}
+
+.container_content_allsUsers_likers_onePublic {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.content_allsUsers_likers_onePublic {
+  width: 30%;
+  height: 77vh;
+  border-radius: 15px;
+  background-color: #262626;
+}
+
+.titleLikeAndButtonExit_allsUsers_likers_onePublic {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid rgba(83, 83, 83, 0.76);
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.titleLikeAndButtonExit_allsUsers_likers_onePublic h3 {
+  margin-left: 160px;
+  font-size: 1.1rem;
+}
+
+.buttonExit_allsUsers_likers_onePublic {
+  margin-left: 140px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.text_viewAllLikers_allsUsers_likers_onePublic {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.text_viewAllLikers_allsUsers_likers_onePublic p {
+  color: rgb(163, 163, 163);
+}
+
+.container_allUsers_toLike_onePublic {
+  position: relative;
+  height: 75%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.container_content_oneUser_toLike {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.container_img_userName_and_names_allsUsers_likers_onePublic {
+  display: flex;
+  align-items: center;
+}
+
+.container_img_userName_and_names {
+  display: flex;
+}
+
+.container_content_oneUser_toLike img {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.userName_oneUser_toLike {
+  cursor: pointer;
+}
+
+.container_button_allUsers_toLike_onePublic {
+  position: absolute;
+  right: 20px;
+}
+
+.container_namesAndUserName_allsUsers_likers_onePublic {
+  margin-left: 15px;
+}
+
+.nameAndFirstName_allsUsers_likers_onePublic {
+  color: rgb(141, 141, 141);
+}
+
+.container_modal_modalShowProfileOneUser {
+  height: 350px;
+  width: 320px;
+  z-index: 15;
+  position: fixed;
+  left: 630px;
+  top: 190px;
+  background-color: black;
+  box-shadow: 0px 0px 4px white;
+  border-radius: 10px;
+}
+
+.container_photoProfile_names_userName_modalShowProfileOneUser {
+  display: flex;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+}
+
+.container_photoProfile_names_userName_modalShowProfileOneUser
+  .imgUser_modal_show_ProfileOneUser {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.container_names_userName_modalShowProfileOneUser {
+  margin-left: 15px;
+}
+
+.userName_modalShowProfileOneUser {
+  color: gray;
+}
+
+.name_modalShowProfileOneUser {
+  cursor: pointer;
+}
+
+.container_dates_modalShowProfileOneUser {
+  position: relative;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.container_numberPublicacions_modalShowProfileOneUser,
+.container_numberFollowers_modalShowProfileOneUser,
+.container_numberFollowed_modalShowProfileOneUser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_numberPublicacions_modalShowProfileOneUser h4 {
+  font-size: 0.9rem;
+}
+
+.container_numberPublicacions_modalShowProfileOneUser h5 {
+  font-size: 0.9rem;
+}
+
+.container_numberFollowers_modalShowProfileOneUser h4 {
+  font-size: 0.9rem;
+}
+
+.container_numberFollowers_modalShowProfileOneUser h5 {
+  font-size: 0.9rem;
+}
+
+.container_numberFollowed_modalShowProfileOneUser h4 {
+  font-size: 0.9rem;
+}
+
+.container_numberFollowed_modalShowProfileOneUser h5 {
+  font-size: 0.9rem;
+}
+
+.container_AllPublicacions_modalShowProfileOneUser {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.contentVideo_publicac_modalShowProfileOneUser {
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.container_img_modalShowProfileOneUser .img_publicac_modalShowProfileOneUser {
+  width: 100px;
+  height: 140px;
+  border-radius: 0px;
+}
+
+.container_thereIsNot_publicacions_modalShowProfileOneUser {
+  margin-top: 15px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.container_thereIsNot_publicacions_modalShowProfileOneUser h3 {
+  position: relative;
+  top: 25px;
+}
+
+.circle_camera_thereIsNot_publicacions_modalShowProfileOneUser {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  position: absolute;
+  left: 139px;
+  bottom: 150px;
+  border: 2px solid #e90aa2a2;
+  border-top-color: #dd23afb7;
+  border-right-color: #ce1a83b7;
+  border-bottom-color: #fbae50a9;
+  border-left-color: #d8ae539c;
+}
+
+.cameraLogo_thereIsNot_publicacions_modalShowProfileOneUser {
+  font-size: 1.8rem;
+  position: relative;
+  left: 153px;
+  bottom: 18px;
+  color: #e90aa2a2;
+}
+
+.container_thereIsNot_publicacions_modalShowProfileOneUser h3 {
+  font-size: 1rem;
+  position: relative;
+  top: -1px;
+  left: 80px;
+  margin-bottom: 5px;
+}
+
+.container_thereIsNot_publicacions_modalShowProfileOneUser p {
+  position: relative;
+  padding: 0px 10px;
+  text-align: center;
+  color: gray;
+}
+
+.container_button_sendMessage_modalShowProfileOneUser {
+  position: relative;
+  top: 15px;
+}
+
+.container_editProfile_modalShowProfileOneUser {
+  position: relative;
+  top: 15px;
+  left: 25px;
+}
+
+.container_editProfile_modalShowProfileOneUser button {
+  border: none;
+  background: transparent;
+  background-color: #262626;
+  padding: 9px 100px 9px 100px;
+  border-radius: 7px;
+  color: white;
+}
+
+.container_editProfile_modalShowProfileOneUser button:hover {
+  background-color: #363636;
+}
+
+.button_sendMessage_modalShowProfileOneUser {
+  position: absolute;
+  padding: 8px 20px 8px 30px;
+  border: none;
+  background: transparent;
+  border-radius: 7px;
+  background-color: #0095f6;
+  color: white;
+}
+
+.icon_messenger_button_sendMessage_modalShowProfileOneUser {
+  position: relative;
+  top: 6px;
+  left: 24px;
+  font-size: 1.2rem;
+  z-index: 1;
+}
+
+.button_following_modalShowProfileOneUser {
+  position: relative;
+  left: 200px;
+  bottom: 8px;
+  background: transparent;
+  border: none;
+  color: white;
+  background-color: #363636;
+  border-radius: 7px;
+  padding: 8px 17px;
+}
+
+.container_buttonFollow_modalShowProfileOneUser {
+  position: relative;
+  top: 15px;
+  left: 8px;
+}
+
+.icon_userPlus_modalShowProfileOneUser {
+  position: relative;
+  top: 2px;
+  left: 125px;
+  z-index: 1;
+}
+
+.container_buttonFollow_modalShowProfileOneUser button {
+  border: none;
+  background: transparent;
+  background-color: #0095f6;
+  padding: 9px 100px 9px 130px;
+  border-radius: 7px;
+  color: white;
+}
+
+.container_buttonFollow_modalShowProfileOneUser button:hover {
+  background-color: #0774bd;
+}
+
+.container_button_allUsers_toLike_onePublic button {
+  border: none;
+  background: transparent;
+  color: white;
+}
+
+.container_button_allUsers_toLike_onePublic
+  .buttonSiguiendo_allUsers_toLike_onePublic {
+  background-color: #363636;
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+
+.container_button_allUsers_toLike_onePublic
+  .buttonSeguir_allsUsers_likers_onePublic {
+  background-color: #0095f6;
+  padding: 8px 20px;
+  border-radius: 8px;
 }
 
 textarea:focus {
@@ -215,15 +866,401 @@ textarea:focus {
   width: 100%;
   height: 1px;
   background-color: rgba(65, 65, 65, 0.486);
-  margin-top: 10px;
 }
 
 .public_comment {
   position: relative;
-  top: -2px;
 }
 
 .content_create_comment_all {
   position: relative;
+  top: 30px;
   height: 52px;
+  max-height: 70px;
+}
+
+.container_emoji_modalComment {
+  position: absolute;
+  bottom: 50px;
+  left: 13px;
+  z-index: 200;
+}
+
+.container_emoji_modalComment .content_emoji_modalComment {
+  --epr-bg-color: #262626;
+  --epr-picker-border-color: rgb(94, 94, 94);
+  --epr-search-input-bg-color: rgb(48, 48, 48);
+  --epr-search-border-color: rgba(255, 255, 255, 0.63);
+  --epr-search-input-bg-color-active: #262626;
+  --epr-focus-bg-color: rgb(48, 48, 48);
+  --epr-category-icon-active-color: rgb(94, 94, 94);
+  --epr-category-label-bg-color: #262626;
+}
+
+.container_modal_share {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.content_modal_share {
+  position: relative;
+  width: 550px;
+  height: 90vh;
+  background-color: #262626;
+  border-radius: 10px;
+}
+
+.exit_modal_share {
+  position: absolute;
+  right: 27px;
+  top: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.content_modal_share_textCompartir {
+  margin-left: 230px;
+  margin-top: 15px;
+}
+
+.modal_share_container_input {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.modal_share_container_input input {
+  width: 90%;
+  height: 38px;
+  background-color: #121212;
+  color: white;
+  border-radius: 7px;
+  padding-left: 35px;
+  border: none;
+}
+
+.iconSearch_modal_share {
+  position: absolute;
+  left: 38px;
+  top: 11px;
+}
+
+.modal_share_container_input input::placeholder {
+  color: #a8a8a8;
+}
+
+.modal_share_container_suggestions {
+  margin-top: 30px;
+  display: grid;
+  height: 57%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  gap: 10px;
+  overflow-y: auto;
+  border-bottom: 1px solid rgb(65, 65, 65);
+}
+
+.modal_share_container_one_suggestion {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 114px;
+  height: 112px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.modal_share_imgUser_suggestions {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.userShareAct {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-color: blue;
+}
+
+.icon_check {
+  position: absolute;
+  left: 70px;
+  top: 50px;
+  font-size: 0.6rem;
+  background-color: #0286df;
+  width: 20px;
+  height: 20px;
+  padding-left: 3px;
+  padding-top: 1px;
+  border-radius: 50%;
+  border: 3px solid #262626;
+}
+
+.modal_share_container_inputAndButtom_send input {
+  border: none;
+  background: transparent;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.modal_share_container_inputAndButtom_send input:focus {
+  outline: none;
+}
+
+.modal_share_container_inputAndButtom_send input::placeholder {
+  color: #a8a8a8;
+}
+
+.modal_share_container_inputAndButtom_send {
+  width: 90%;
+  height: 110px;
+  margin-left: 30px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal_share_container_inputAndButtom_send button {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  height: 32px;
+}
+
+.modal_share_container_content_socialMedia {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content_socialMedia {
+  width: 50px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon_content_socialMedia {
+  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #121212;
+}
+
+.copy_enlace {
+  margin-left: 3px;
+}
+
+.container_modalShareComment {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4000;
+}
+
+.container_content_modalShareComment {
+  width: 41%;
+  height: 66vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #262626;
+  border-radius: 9px;
+}
+
+.content_modalShareComment_titleAndExit {
+  display: flex;
+  position: relative;
+  left: 225px;
+  bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.content_modalShareComment_titleAndExit h4 {
+  font-size: 1.1rem;
+}
+
+.content_modalShareComment_bordersAndInputForSearchUsers {
+  position: relative;
+}
+
+.content_modalShareComment_bordersAndInputForSearchUsers h4 {
+  margin-left: 20px;
+}
+
+.content_modalShareComment_ContainerInputForSearchUsers {
+  display: flex;
+  align-items: center;
+  padding: 3px 0px;
+}
+
+.content_modalShareComment_ContainerInputForSearchUsers input {
+  border: none;
+  background: transparent;
+  width: 85%;
+  padding-left: 15px;
+  color: white;
+}
+
+.content_modalShareComment_ContainerInputForSearchUsers input:focus {
+  outline: none;
+}
+
+.ContainerInputForSearchUsers_border {
+  width: 550px;
+  height: 1px;
+  background-color: rgba(80, 80, 80, 0.815);
+}
+
+.content_modalShareComment_exitButton {
+  position: absolute;
+  left: 280px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.container_AllSeguidMoodShort_modalShareComment {
+  overflow-y: scroll;
+  height: 210px;
+  min-height: 90%;
+  width: 550px;
+  border-top: 1px solid rgba(80, 80, 80, 0.815);
+  border-bottom: 1px solid rgba(80, 80, 80, 0.815);
+  position: relative;
+  transition: 0.2s linear;
+}
+
+.container_AllSeguid_modalShareComment {
+  overflow-y: scroll;
+  height: 250px;
+  min-height: 250px;
+  width: 550px;
+  border-top: 1px solid rgba(80, 80, 80, 0.815);
+  border-bottom: 1px solid rgba(80, 80, 80, 0.815);
+  position: relative;
+  transition: 0.2s linear;
+}
+
+.container_AllSeguid_modalShareComment_suggestions {
+  font-size: 1rem;
+  margin: 15px 0px 20px 15px;
+}
+
+.container_oneSeguid_modalShareComment img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+.container_oneSeguid_modalShareComment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.container_oneSeguid_modalShareComment_namesAndUsername {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.names_modalShareComment {
+  font-size: 1rem;
+  color: #f5f5f5;
+}
+
+.userName_modalShareComment {
+  color: #a8a8a8;
+}
+
+.circleForSend {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: absolute;
+  left: 495px;
+  cursor: pointer;
+}
+
+.circleForSendActiv {
+  background-color: white;
+}
+
+.checkList_modalShareComment {
+  color: gray;
+  position: relative;
+  left: 5px;
+}
+
+.container_inputAndButtonSendAct_modalShareComment {
+  margin-left: 28px;
+  position: relative;
+  top: 12px;
+  width: 100%;
+}
+
+.container_inputAndButtonSendAct_modalShareComment input {
+  border: none;
+  background: transparent;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.container_inputAndButtonSendAct_modalShareComment input:focus {
+  outline: none;
+}
+
+.buttonSend_modalShareCommentActiv {
+  background-color: #0095f6;
+  padding: 8px 0px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  width: 90%;
+}
+
+.container_buttonSend_modalShareComment {
+  margin-left: 28px;
+  position: relative;
+  top: 12px;
+  width: 100%;
+}
+
+.buttonSend_modalShareComment {
+  background-color: #1b4865;
+  padding: 8px 0px;
+  border: none;
+  border-radius: 8px;
+  color: gray;
+  width: 90%;
 }

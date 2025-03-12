@@ -1,5 +1,10 @@
-.image_publicac {
+.image_publicac_profile,
+.video_publicac_profile {
   cursor: pointer;
   width: 310px;
   height: 310px;
+}
+
+.video_publicac_profile {
+  object-fit: cover;
 }

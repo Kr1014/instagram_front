@@ -12,6 +12,25 @@
   transition: 0.5s;
 }
 
+.button_nav_reducer {
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  margin-top: 10px;
+  width: 50px;
+  border-radius: 7px;
+  padding: 10px 2px;
+  padding-left: 11px;
+  transition: 0.5s;
+}
+
+.button_nav_reducer:hover {
+  background-color: rgba(148, 146, 146, 0.185);
+}
+
 .logo_insta {
   color: white;
   margin-top: 10px;
@@ -29,8 +48,16 @@
   margin-left: 10px;
 }
 
+.link_button {
+  max-width: 20px;
+}
+
 .icon_nav {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.icon_home {
+  font-size: 1.7rem;
 }
 
 .button_perfil {
@@ -52,6 +79,7 @@
 
 .container_buttons_nav {
   margin-top: 40px;
+  width: 250px;
 }
 
 .name_insta {
@@ -60,8 +88,8 @@
 }
 
 .photo_nav_profile {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
 
@@ -124,6 +152,240 @@
   z-index: 3000;
   position: fixed;
   background-color: black;
-  border-radius: 0px 10px 10px 0px;
-  border-right: 1px solid gray;
+  border-right: 1px solid rgba(88, 88, 88, 0.493);
+}
+
+.container_buttons_messages_mode {
+  margin-left: 10px;
+  width: 60px;
+  border-right: 1px solid rgba(88, 88, 88, 0.493);
+}
+
+.container_buttons_messages_mode .button_nav_reducer {
+  margin-right: 10px;
+}
+
+.container_userId_messages {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 240px;
+  margin-bottom: 20px;
+}
+
+.container_profiles_notes {
+  height: 150px;
+}
+
+.icon_newMessage {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.container_newMessage_Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.content_newMessage_Navbar {
+  background-color: #262626;
+  position: relative;
+  width: 43%;
+  height: 64vh;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 15px;
+}
+
+.container_textNewMessage_and_buttonExit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.container_textNewMessage_and_buttonExit h4 {
+  font-size: 1.1rem;
+}
+
+.buttonExit_modalNewMessage_Navbar {
+  font-size: 1.5rem;
+  position: relative;
+  left: 190px;
+  cursor: pointer;
+}
+
+.container_inputNewMessage_Navbar {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(128, 128, 128, 0.205);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.205);
+  padding: 4px 0px 4px 15px;
+}
+
+.inputNewMessage_Navbar {
+  background-color: transparent;
+  border: none;
+  width: 90%;
+  margin-left: 10px;
+  color: white;
+}
+
+.container_selectUser_forNewMessage {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.container_selectUser_forNewMessage h4 {
+  font-size: 0.95rem;
+  margin-left: 12px;
+}
+
+.span_namesUser_forNewMessage {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.inputNewMessage_Navbar:focus {
+  outline: none;
+}
+
+.container_sugerencias_newMessages_forNewMessage {
+  height: 240px;
+  overflow-y: auto;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.container_sugerencias_newMessages_forNewMessage
+  .suggestions_newMessages_forNewMessage {
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.circle_selectUser_forNewMessage {
+  position: absolute;
+  left: 520px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.circle_selectUser_forNewMessage_ACT {
+  background-color: white;
+}
+
+.checkList_newMessage {
+  color: gray;
+  position: relative;
+  left: 4px;
+  bottom: 1px;
+}
+
+.content_sugerencias_newMessages_forNewMessage {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.content_sugerencias_newMessages_forNewMessage
+  .container_selectUser_forNewMessage
+  img {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+.buttonChat_selectUser_forNewMessage {
+  position: relative;
+  left: 28px;
+  width: 90%;
+  border: none;
+  padding: 13px 0px;
+  border-radius: 7px;
+  cursor: default;
+  position: relative;
+  color: rgba(128, 128, 128, 0.555);
+  background-color: #1b4865;
+}
+
+.buttonChat_selectUser_forNewMessage_ACT {
+  color: white;
+  background-color: rgb(49, 143, 250);
+  position: relative;
+  left: 28px;
+  width: 90%;
+  border: none;
+  padding: 13px 0px;
+  border-radius: 7px;
+  position: relative;
+}
+
+.no_users_followed {
+  text-align: center;
+}
+
+.no_users_followed h3 {
+  font-size: 1.5rem;
+}
+
+.container_messages_requests {
+  display: flex;
+  gap: 200px;
+}
+
+.container_all_messages {
+  width: 100%;
+  margin-left: 25px;
+  overflow-y: scroll;
+}
+
+.container_all_messages::-webkit-scrollbar {
+  background: rgb(59, 59, 59);
+}
+
+.container_all_messages::-webkit-scrollbar-thumb {
+  background: rgba(105, 105, 105, 0.87);
+}
+
+.container_all_messages::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.753);
+}
+
+.container_all_messages img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.container_allUsers_allMessages {
+  margin-top: 25px;
+}
+
+.container_oneUser_allMessage {
+  margin-top: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.container_firstName_texto {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

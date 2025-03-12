@@ -8,8 +8,9 @@ const ReelsPage = () => {
   const [reel, getReel] = useFetch();
 
   useEffect(() => {
-    const url = "http://localhost:8080/api/v1/reels";
+    const url = "http://localhost:8080/api/v1/publicaciones/videos";
     getReel(url, getToken());
+    console.log(reel);
   }, []);
 
   return (

@@ -1,0 +1,364 @@
+.container_pagePublicacion {
+  margin-left: 270px;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.conten_pagePublicacion {
+  position: relative;
+  height: 600px;
+  width: 920px;
+  top: 15px;
+  left: 70px;
+  border: 1px solid rgba(88, 88, 88, 0.808);
+  display: flex;
+}
+
+.videoPublic_pagePublicacion {
+  width: 430px;
+  height: 599px;
+  border-right: 1px solid rgba(88, 88, 88, 0.808);
+  border-bottom: 1px solid rgba(88, 88, 88, 0.808);
+  object-fit: cover;
+}
+
+.imgPublic_pagePublicacion {
+  width: 430px;
+  height: 599px;
+  border-right: 1px solid rgba(88, 88, 88, 0.808);
+  border-bottom: 1px solid rgba(88, 88, 88, 0.808);
+}
+
+.container_dates_user_pagePublicacion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.container_dates_user_pagePublicacion h3 {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.buttonFollowing_pagePublicacion {
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  color: white;
+}
+
+.buttonFollow_pagePublicacion {
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  color: #0095f6;
+}
+
+.photoProfile_pagePublicacion {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.moreOptions_dates_user_pagePublicacion {
+  position: absolute;
+  left: 440px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.container_userName_and_description_pagePublicacion {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.container_comments_pagePublicacion {
+  border-bottom: 1px solid rgba(88, 88, 88, 0.808);
+  border-top: 1px solid rgba(88, 88, 88, 0.808);
+  margin-top: 20px;
+  padding-left: 10px;
+  width: 490px;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.container_comments_pagePublicacion::-webkit-scrollbar {
+  outline: none;
+}
+
+.container_usersLikers_publicacionPage {
+  margin-left: 13px;
+}
+
+.button_oneUserLike_publicacionPage {
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.container_content_imgAndUsername_description_pagePublicacion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.userName_and_description_pagePublicacion,
+.description_and_description_pagePublicacion {
+  font-size: 0.9rem;
+}
+
+.container_modal_modalShowProfileOneUser_ComponentPublicacionPage {
+  height: 350px;
+  width: 320px;
+  z-index: 15;
+  position: fixed;
+  left: 800px;
+  top: 50px;
+  background-color: black;
+  box-shadow: 0px 0px 4px white;
+  border-radius: 10px;
+}
+
+.container_modal_modalShowProfileOneUser_ComponentPublicacionPagePubliDescription {
+  height: 350px;
+  width: 320px;
+  z-index: 15;
+  position: fixed;
+  left: 800px;
+  top: 95px;
+  background-color: black;
+  box-shadow: 0px 0px 4px white;
+  border-radius: 10px;
+}
+
+.userName_and_description_pagePublicacion {
+  cursor: pointer;
+}
+
+.container_text_morePublicacions {
+  position: relative;
+  top: 90px;
+  left: 70px;
+}
+
+.container_text_morePublicacions h3 {
+  font-size: 1rem;
+}
+
+.container_text_morePublicacions h3 button {
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.container_morePublicacions_publicacionPage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  gap: 15px;
+  border-top: 1px solid rgba(88, 88, 88, 0.808);
+  padding-top: 55px;
+  margin-top: 50px;
+  width: 920px;
+  height: auto;
+  margin-left: 70px;
+}
+
+.container_modalMoreOptions_publicacionPage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.content_modalMoreOptions_publicacionPage {
+  background-color: #262626;
+  width: 30%;
+  height: 47vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.content_modalMoreOptions_publicacionPage button {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  position: relative;
+  top: 10px;
+}
+
+.content_modalMoreOptions_publicacionPage div {
+  width: 100%;
+  border-top: 1px solid rgba(88, 88, 88, 0.808);
+  padding: 4px 0px;
+  position: relative;
+}
+
+.content_modalMoreOptions_publicacionPage .container_button_giveUp {
+  border-top: none;
+  padding-top: 0px;
+}
+
+.content_modalMoreOptions_publicacionPage div .button_giveUp {
+  color: #ed4956;
+}
+
+.container_oneVideo_morePublicacions_publicacionPage,
+.container_oneImage_morePublicacions_publicacionPage {
+  width: 300px;
+  height: 380px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.container_buttons_infoApplication_publicacionPage {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.container_buttons_infoApplication_publicacionPage a {
+  color: gray;
+  font-size: 0.8rem;
+}
+
+.container_buttonPubli_and_likersAndTime {
+  border-bottom: 1px solid rgba(88, 88, 88, 0.808);
+  height: 80px;
+}
+
+.container_buttonsPubli_publicacionPage {
+  display: flex;
+  gap: 17px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.container_buttonsPubli_publicacionPage .button_heart {
+  font-size: 1.7rem;
+  position: relative;
+  bottom: 1px;
+  cursor: pointer;
+}
+
+.button_like_act_publicacionPage {
+  color: #ff3040;
+  font-size: 1.7rem;
+  position: relative;
+  bottom: 1px;
+  cursor: pointer;
+}
+
+.icon_comment,
+.icon_share {
+  cursor: pointer;
+}
+
+.container_buttonSaved_publicacionPage {
+  margin-left: 310px;
+}
+
+.buttonSaved_publicacionPage {
+  cursor: pointer;
+}
+
+.container_time_publicacionPage {
+  margin-left: 13px;
+}
+
+.space_showLikers_publicacionPage {
+  margin-left: 2px;
+  margin-right: 3px;
+}
+
+.container_usersLikers_publicacionPage {
+  display: flex;
+}
+
+.moreLikers_onePublic_publicacionPage {
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.icon_emoji_publicacionPage {
+  position: relative;
+  font-size: 1.1rem;
+  left: 415px;
+  cursor: pointer;
+}
+
+.container_textArea_publicacionPage {
+  position: relative;
+}
+
+.textArea_publicacionPage {
+  resize: none;
+  background: transparent;
+  position: relative;
+  top: 13px;
+  left: 20px;
+  width: 280px;
+  color: white;
+  border: none;
+}
+
+.button_publicar_publicacionPage {
+  position: absolute;
+  top: 18px;
+  left: 370px;
+  background: transparent;
+  color: #0095f6;
+  border: none;
+}
+
+.photoProfile_textarea_pagePublicacion {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+  top: 9px;
+  left: 15px;
+}
+
+.container_emojiPicker_pagePublicacion {
+  position: absolute;
+  bottom: 45px;
+  left: 140px;
+}
+
+.container_emojiPicker_pagePublicacion .content_emojis_commentMain {
+  border-radius: 20px;
+  height: 200px;
+  --epr-bg-color: #262626;
+  --epr-picker-border-color: rgb(94, 94, 94);
+  --epr-search-input-bg-color: rgb(48, 48, 48);
+  --epr-search-border-color: rgba(255, 255, 255, 0.63);
+  --epr-search-input-bg-color-active: #262626;
+  --epr-focus-bg-color: rgb(48, 48, 48);
+  --epr-category-icon-active-color: rgb(94, 94, 94);
+  --epr-category-label-bg-color: #262626;
+}

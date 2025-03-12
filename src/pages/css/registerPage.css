@@ -1,0 +1,75 @@
+.container_registerPage {
+  background: linear-gradient(180deg, #b785c4, #8ea1cb);
+  overflow-x: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content_registerPage {
+  border-radius: 3px;
+  position: relative;
+  height: 700px;
+  top: 15px;
+  bottom: 30px;
+  width: 350px;
+  border: 1px solid #d0b8e8;
+}
+
+.container_titleAndSubtitles_registerPage {
+  text-align: center;
+}
+
+.container_titleAndSubtitles_registerPage h1 {
+  color: black;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.container_titleAndSubtitles_registerPage h3 {
+  color: #343a40;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.button_loguearWithFacebook {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 17%;
+  border-radius: 5px;
+  padding: 8px 18px;
+  margin-top: 15px;
+  background-color: #1294ff;
+  color: white;
+  border: none;
+  padding-bottom: 15px;
+}
+
+.iconFacebook_register {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.container_toGo_LoginFromRegister {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 350px;
+  padding: 25px 15px;
+  border: 1px solid #d0b8e8;
+  border-radius: 3px;
+  color: #343a40;
+}
+
+.container_toGo_LoginFromRegister h4 {
+  font-size: 1rem;
+}
+
+.toGo_LoginFromRegister {
+  font-size: 1rem;
+  color: white;
+}
